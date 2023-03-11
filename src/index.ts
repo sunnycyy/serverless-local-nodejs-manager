@@ -17,8 +17,10 @@ class ServerlessLocalNodejsManager {
         const {localNodejsVersion} = service.custom;
         if (!localNodejsVersion) return;
 
-        const version = localNodejsVersion.toString();
-        const versionData = this.validateLocalNodejsVersion(version);
+        if (typeof localNodejsVersion !== "string") {
+            this.throwServerlessError("localNodejsVersion must be in string type");
+        }
+        const versionData = this.validateLocalNodejsVersion(localNodejsVersion);
 
         const installedNodejsVersion = process.version.substring(1);
         const installedVersionData = this.getVersionData(installedNodejsVersion);
