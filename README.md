@@ -1,7 +1,9 @@
 # Serverless Local Node.js Manager
 Simple [Serverless][link-serverless] plugin for validating local installed Node.js version before packaging and deployment.
 
-[![Serverless](http://public.serverless.com/badges/v3.svg)][link-serverless]
+[![serverless](http://public.serverless.com/badges/v3.svg)][link-serverless]
+[![license](https://img.shields.io/npm/l/serverless-local-nodejs-manager)](./LICENSE)
+[![npm](https://img.shields.io/npm/v/serverless-local-nodejs-manager)](https://www.npmjs.com/package/serverless-local-nodejs-manager)
 
 ## Installation
 **Install via Serverless**
