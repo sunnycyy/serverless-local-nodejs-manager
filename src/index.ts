@@ -11,6 +11,7 @@ class ServerlessLocalNodejsManager {
         this.hooks = {
             "before:package:initialize": () => this.checkLocalNodejsVersion(),
             "before:deploy:deploy": () => this.checkLocalNodejsVersion(),
+            "before:deploy:function:initialize": () => this.checkLocalNodejsVersion(),
         };
     }
 
