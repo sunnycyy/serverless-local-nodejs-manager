@@ -11,12 +11,15 @@
     "url": "git+https://github.com/sunnycyy/serverless-local-nodejs-manager.git"
   },
   "keywords": [
-    "Serverless",
-    "Plugin",
-    "Node.js"
+    "aws",
+    "nodejs",
+    "serverless",
+    "serverless-framework",
+    "serverless-plugin",
+    "typescript"
   ],
-  "author": "Sunny Cheng",
-  "license": "ISC",
+  "author": "Sunny Cheng <yuk.yat.cheng@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sunnycyy/serverless-local-nodejs-manager/issues"
   },
@@ -26,10 +29,8 @@
     "@types/serverless": "^3.12.11",
     "typescript": "^4.9.5"
   },
-  "files": [
-    "./dist/**/*"
-  ],
   "peerDependencies": {
     "serverless": "*"
-  }
+  },
+  "files": ["./dist/**/*"]
 }
