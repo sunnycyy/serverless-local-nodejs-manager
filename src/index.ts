@@ -1,5 +1,7 @@
 import Serverless from "serverless";
 
+const MAX_VERSION_DATA_LENGTH: number = 3;
+
 class ServerlessLocalNodejsManager {
     serverless: Serverless;
     hooks: Record<string, Function>;
@@ -28,7 +30,8 @@ class ServerlessLocalNodejsManager {
         const count = Math.min(versionData.length, installedVersionData.length);
         for (let i = 0; i < count; i++) {
             if (versionData[i] !== installedVersionData[i]) {
-                this.throwServerlessError(`Installed Node.js version does not match required version: required=${version}, installed=${installedNodejsVersion}`);
+                const requiredVersionString = this.getRequiredVersionString(versionData);
+                this.throwServerlessError(`Installed Node.js version does not match required version: required=${requiredVersionString}, installed=${installedNodejsVersion}`);
             }
         }
     }
@@ -46,6 +49,14 @@ class ServerlessLocalNodejsManager {
             }
         }
         return versionData;
+    }
+
+    getRequiredVersionString(versionData: string[]): string {
+        let str = versionData[0];
+        for (let i = 1; i < MAX_VERSION_DATA_LENGTH; i++) {
+            str += `.${versionData.length > i ? versionData[i] : "x"}`;
+        }
+        return str;
     }
 
     throwServerlessError(message: string): void {
