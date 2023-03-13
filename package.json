@@ -4,7 +4,8 @@
   "description": "Serverless plugin for ensuring correct local installed Node.js version for building Serverless packages",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
