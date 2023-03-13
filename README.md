@@ -1,9 +1,9 @@
 # Serverless Local Node.js Manager
-Simple [Serverless][link-serverless] plugin for validating local installed Node.js version before packaging and deployment.
+Simple [Serverless][url-serverless] plugin for validating local installed [Node.js][url-nodejs] version before packaging and deployment.
 
-[![serverless](http://public.serverless.com/badges/v3.svg)][link-serverless]
-[![license](https://img.shields.io/npm/l/serverless-local-nodejs-manager)](./LICENSE)
-[![npm](https://img.shields.io/npm/v/serverless-local-nodejs-manager)](https://www.npmjs.com/package/serverless-local-nodejs-manager)
+[![serverless][icon-serverless]][url-serverless]
+[![license][icon-license]][path-license]
+[![npm][icon-npm]][url-npm]
 
 ## Installation
 **Install via Serverless**
@@ -72,4 +72,10 @@ If `localNodejsVersion` is set to `16.18.1`:
 |         `16.18.1`         |   ⭕    |
 |         `16.18.0`         |   ❌    |
 
-[link-serverless]: https://www.serverless.com/
+[url-serverless]: https://www.serverless.com
+[url-nodejs]: https://nodejs.org
+[url-npm]: https://www.npmjs.com/package/serverless-local-nodejs-manager
+[path-license]: ./LICENSE
+[icon-serverless]: http://public.serverless.com/badges/v3.svg
+[icon-license]: https://img.shields.io/npm/l/serverless-local-nodejs-manager
+[icon-npm]: https://img.shields.io/npm/v/serverless-local-nodejs-manager
